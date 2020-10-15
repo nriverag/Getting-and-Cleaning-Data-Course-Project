@@ -5,7 +5,7 @@ library(dplyr)
 
 # Directory
 getwd()
-setwd("C:/Users/Nicol·s Rivera/OneDrive/Documentos/Data Science Johns Hopkins University/Getting and cleaning data/Semana 4/Assignment")
+setwd("C:/Users/Nicol√°s Rivera/OneDrive/Documentos/Data Science Johns Hopkins University/Getting and cleaning data/Semana 4/Assignment")
 
 # Download data
 # Filename
@@ -58,7 +58,7 @@ names(TidyData)<-gsub("-freq()", "Frequency", names(TidyData), ignore.case = TRU
 names(TidyData)<-gsub("angle", "Angle", names(TidyData))
 names(TidyData)<-gsub("gravity", "Gravity", names(TidyData))
 
-# Final Dataset
+# 6. Final Dataset
 FinalData <- TidyData %>%
   group_by(subject, activity) %>%
   summarise_all(funs(mean))
